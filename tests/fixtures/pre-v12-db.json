@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 11,
+  "teams": [
+    {
+      "id": "TEAM-CSK",
+      "name": "Chennai Super Kings",
+      "shortName": "CSK",
+      "primaryColor": "#f59e0b",
+      "playerIds": ["P-CSK-1", "P-CSK-2", "P-CSK-3", "P-CSK-4", "P-CSK-5", "P-CSK-6", "P-CSK-7", "P-CSK-8", "P-CSK-9", "P-CSK-10", "P-CSK-11"],
+      "createdAt": 1700000000000
+    },
+    {
+      "id": "TEAM-MI",
+      "name": "Mumbai Indians",
+      "shortName": "MI",
+      "primaryColor": "#2563eb",
+      "playerIds": ["P-MI-1", "P-MI-2", "P-MI-3", "P-MI-4", "P-MI-5", "P-MI-6", "P-MI-7", "P-MI-8", "P-MI-9", "P-MI-10", "P-MI-11"],
+      "createdAt": 1700000000000
+    }
+  ],
+  "players": [
+    { "id": "P-CSK-1", "name": "Ruturaj Gaikwad", "dob": "1997-01-31", "role": "Batter", "battingStyle": "Right-hand bat", "bowlingStyle": "None", "jerseyNumber": 31, "createdAt": 1700000000000 },
+    { "id": "P-CSK-2", "name": "Devon Conway", "dob": "1991-07-08", "role": "Batter", "battingStyle": "Left-hand bat", "bowlingStyle": "None", "jerseyNumber": 88, "createdAt": 1700000000000 },
+    { "id": "P-CSK-3", "name": "Shivam Dube", "dob": "1993-06-26", "role": "All-Rounder", "battingStyle": "Left-hand bat", "bowlingStyle": "Right-arm medium", "jerseyNumber": 25, "createdAt": 1700000000000 },
+    { "id": "P-CSK-4", "name": "Ravindra Jadeja", "dob": "1988-12-06", "role": "All-Rounder", "battingStyle": "Left-hand bat", "bowlingStyle": "Left-arm orthodox", "jerseyNumber": 8, "createdAt": 1700000000000 },
+    { "id": "P-CSK-5", "name": "MS Dhoni", "dob": "1981-07-07", "role": "Wicket-Keeper", "battingStyle": "Right-hand bat", "bowlingStyle": "None", "jerseyNumber": 7, "createdAt": 1700000000000 },
+    { "id": "P-CSK-6", "name": "Matheesha Pathirana", "dob": "2002-12-18", "role": "Bowler", "battingStyle": "Right-hand bat", "bowlingStyle": "Right-arm fast", "jerseyNumber": 81, "createdAt": 1700000000000 },
+    { "id": "P-MI-1", "name": "Rohit Sharma", "dob": "1987-04-30", "role": "Batter", "battingStyle": "Right-hand bat", "bowlingStyle": "Right-arm offbreak", "jerseyNumber": 45, "createdAt": 1700000000000 },
+    { "id": "P-MI-2", "name": "Ishan Kishan", "dob": "1998-07-18", "role": "Wicket-Keeper", "battingStyle": "Left-hand bat", "bowlingStyle": "None", "jerseyNumber": 32, "createdAt": 1700000000000 },
+    { "id": "P-MI-3", "name": "Suryakumar Yadav", "dob": "1990-09-14", "role": "Batter", "battingStyle": "Right-hand bat", "bowlingStyle": "None", "jerseyNumber": 63, "createdAt": 1700000000000 },
+    { "id": "P-MI-4", "name": "Hardik Pandya", "dob": "1993-10-11", "role": "All-Rounder", "battingStyle": "Right-hand bat", "bowlingStyle": "Right-arm fast", "jerseyNumber": 33, "createdAt": 1700000000000 },
+    { "id": "P-MI-5", "name": "Jasprit Bumrah", "dob": "1993-12-06", "role": "Bowler", "battingStyle": "Right-hand bat", "bowlingStyle": "Right-arm fast", "jerseyNumber": 93, "createdAt": 1700000000000 }
+  ],
+  "matches": [
+    {
+      "id": "MATCH-LEGACY-CSK-MI",
+      "title": "CSK vs MI — Classic Chase",
+      "format": "T10",
+      "season": "2026",
+      "venue": "Chepauk Stadium",
+      "date": "2026-11-15",
+      "scorerName": "Scorer",
+      "teamAId": "TEAM-CSK",
+      "teamBId": "TEAM-MI",
+      "teamAXI": ["P-CSK-1", "P-CSK-2", "P-CSK-3", "P-CSK-4", "P-CSK-5", "P-CSK-6", "P-CSK-7", "P-CSK-8", "P-CSK-9", "P-CSK-10", "P-CSK-11"],
+      "teamBXI": ["P-MI-1", "P-MI-2", "P-MI-3", "P-MI-4", "P-MI-5", "P-MI-6", "P-MI-7", "P-MI-8", "P-MI-9", "P-MI-10", "P-MI-11"],
+      "tossWinnerTeamId": "TEAM-CSK",
+      "tossDecision": "bat",
+      "rules": {
+        "oversPerInnings": 10,
+        "ballsPerOver": 6,
+        "wideRuns": 1,
+        "noBallRuns": 1,
+        "freeHitEnabled": true,
+        "powerplayOvers": 3,
+        "maxOversPerBowler": 2
+      },
+      "innings": [
+        {
+          "inningsNumber": 1,
+          "battingTeamId": "TEAM-CSK",
+          "bowlingTeamId": "TEAM-MI",
+          "openingStrikerId": "P-CSK-1",
+          "openingNonStrikerId": "P-CSK-2",
+          "openingBowlerId": "P-MI-5"
+        },
+        {
+          "inningsNumber": 2,
+          "battingTeamId": "TEAM-MI",
+          "bowlingTeamId": "TEAM-CSK",
+          "openingStrikerId": "P-MI-1",
+          "openingNonStrikerId": "P-MI-2",
+          "openingBowlerId": "P-CSK-6"
+        }
+      ],
+      "currentInningsNumber": 2,
+      "status": "completed",
+      "createdAt": 1700000100000,
+      "updatedAt": 1700000200000
+    }
+  ]
+}

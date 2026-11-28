@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="112" fill="#2C47D6"/>
+  <circle cx="256" cy="256" r="156" fill="#DC2626" stroke="#EFF4FF" stroke-width="10"/>
+  <path d="M146 146 C 210 210, 210 302, 146 366" fill="none" stroke="#EFF4FF" stroke-width="10" stroke-dasharray="14 10" stroke-linecap="round"/>
+  <path d="M366 146 C 302 210, 302 302, 366 366" fill="none" stroke="#EFF4FF" stroke-width="10" stroke-dasharray="14 10" stroke-linecap="round"/>
+  <text x="256" y="278" font-family="system-ui, sans-serif" font-weight="900" font-size="68" fill="#FFFFFF" text-anchor="middle" letter-spacing="4">CRICS</text>
+</svg>

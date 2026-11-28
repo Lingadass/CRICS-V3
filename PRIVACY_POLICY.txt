@@ -1,0 +1,22 @@
+CRICS Cricket Scorer — Privacy Policy
+Effective Date: November 15, 2026
+Package ID: com.crics.offline.scorer
+
+1. Summary: All Data Stays on Your Device
+CRICS Cricket Scorer operates 100% offline. All data you create or import—including player names, player photos, teams, match scorecards, ball-by-ball records, career statistics, tournament tables, and settings—stays on your device inside your browser or app's local storage (IndexedDB).
+
+2. No Data Collection, No Accounts, and No Network Calls
+- We do not collect, transmit, store, sell, or share any personal information or usage data.
+- There are no user accounts, sign-ups, cloud databases, advertising SDKs, or analytics trackers.
+- The app makes zero network calls at runtime.
+
+3. Optional Scorer Lock PIN
+If you set a 4-digit Scorer Lock PIN in Settings, it is stored locally on your device as a salted SHA-256 hash. It is a convenience lock to prevent accidental taps while scoring and is not encryption. By default, exported backup files exclude your PIN unless you explicitly choose to include it.
+
+4. Backups, Exports, and Deleting Your Data
+You are in full control of your data at all times:
+- You can export your records to a JSON backup file, CSV file, PDF scorecard, or image directly on your device.
+- You can delete individual players, teams, matches, or tournaments inside the app, or clear all app data at any time through your device or browser settings.
+
+5. Contact
+If you have questions about this privacy policy, please contact the developer listed on the CRICS Cricket Scorer Google Play Store listing.

@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 3,
+  "exportedAt": "2026-11-10T10:00:00.000Z",
+  "app": "CRICS",
+  "players": [
+    {
+      "id": "P-OLD-1",
+      "name": "Rohit Varma",
+      "role": "Batter",
+      "battingStyle": "Right-hand bat",
+      "bowlingStyle": "None",
+      "jerseyNumber": 45,
+      "createdAt": 1700000001000
+    },
+    {
+      "id": "P-OLD-2",
+      "name": "Karan Mehta",
+      "role": "Bowler",
+      "battingStyle": "Right-hand bat",
+      "bowlingStyle": "Right-arm fast",
+      "jerseyNumber": 11,
+      "createdAt": 1700000002000
+    }
+  ],
+  "teams": [
+    {
+      "id": "T-OLD-1",
+      "name": "Alpha XI",
+      "shortName": "ALP",
+      "primaryColor": "var(--color-brand-600)",
+      "playerIds": ["P-OLD-1"],
+      "createdAt": 1700000001000
+    },
+    {
+      "id": "T-OLD-2",
+      "name": "Bravo XI",
+      "shortName": "BRV",
+      "primaryColor": "var(--color-four)",
+      "playerIds": ["P-OLD-2"],
+      "createdAt": 1700000002000
+    },
+    {
+      "id": "T-OLD-3",
+      "name": "Charlie XI",
+      "shortName": "CHR",
+      "primaryColor": "var(--color-six)",
+      "playerIds": ["P-OLD-1"],
+      "createdAt": 1700000003000
+    },
+    {
+      "id": "T-OLD-4",
+      "name": "Delta XI",
+      "shortName": "DLT",
+      "primaryColor": "var(--color-accent)",
+      "playerIds": ["P-OLD-2"],
+      "createdAt": 1700000004000
+    }
+  ],
+  "matches": [],
+  "ballEvents": [],
+  "tournaments": [
+    {
+      "id": "TOUR-OLD-PRE-V11",
+      "name": "Pre-v11 Monsoon Cup",
+      "season": "2026",
+      "format": "T20",
+      "type": "Groups",
+      "teamIds": ["T-OLD-1", "T-OLD-2", "T-OLD-3", "T-OLD-4"],
+      "teamGroups": {
+        "T-OLD-1": "Group A",
+        "T-OLD-2": "Group A",
+        "T-OLD-3": "Group B",
+        "T-OLD-4": "Group B"
+      },
+      "pointsForWin": 2,
+      "pointsForTie": 1,
+      "createdAt": 1700000005000,
+      "fixtures": [
+        {
+          "id": "FIX-OLD-1",
+          "tournamentId": "TOUR-OLD-PRE-V11",
+          "roundName": "Group A",
+          "stage": "league",
+          "teamAId": "T-OLD-1",
+          "teamBId": "T-OLD-2",
+          "date": "2026-11-12",
+          "venue": "Main Oval"
+        },
+        {
+          "id": "FIX-OLD-2",
+          "tournamentId": "TOUR-OLD-PRE-V11",
+          "roundName": "Group B",
+          "stage": "league",
+          "teamAId": "T-OLD-3",
+          "teamBId": "T-OLD-4",
+          "date": "2026-11-13",
+          "venue": "Main Oval"
+        }
+      ]
+    }
+  ],
+  "settings": []
+}

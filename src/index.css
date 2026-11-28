@@ -1,0 +1,223 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --token-accent: #F59E0B;
+  --token-four: #075985;
+  --token-six: #6D28D9;
+  --token-wicket: #DC2626;
+  --token-extra: #B45309;
+  --token-success: #15803D;
+  --token-page: #F6F8FC;
+  --token-card: #FFFFFF;
+  --token-border: #E3E8F2;
+  --token-text: #0F172A;
+  --token-muted: #475569;
+  --token-theme-meta: #2C47D6;
+}
+
+.dark {
+  --token-accent: #FBBF24;
+  --token-four: #38BDF8;
+  --token-six: #A78BFA;
+  --token-wicket: #F87171;
+  --token-extra: #FBBF24;
+  --token-success: #4ADE80;
+  --token-page: #0B1020;
+  --token-card: #121A30;
+  --token-border: #222C47;
+  --token-text: #E8ECF8;
+  --token-muted: #A3AECB;
+  --token-theme-meta: #121A45;
+}
+
+@theme {
+  --color-brand-50: #EFF4FF;
+  --color-brand-100: #DCE6FF;
+  --color-brand-200: #BFD0FF;
+  --color-brand-300: #93AEFF;
+  --color-brand-400: #6483FA;
+  --color-brand-500: #3F61F0;
+  --color-brand-600: #2C47D6;
+  --color-brand-700: #2437AE;
+  --color-brand-800: #202F8B;
+  --color-brand-900: #1D2A6E;
+  --color-brand-950: #121A45;
+
+  --color-accent: var(--token-accent);
+  --color-four: var(--token-four);
+  --color-six: var(--token-six);
+  --color-wicket: var(--token-wicket);
+  --color-extra: var(--token-extra);
+  --color-success: var(--token-success);
+  --color-page: var(--token-page);
+  --color-card: var(--token-card);
+  --color-border: var(--token-border);
+  --color-line: var(--token-border);
+  --color-text: var(--token-text);
+  --color-muted: var(--token-muted);
+}
+
+.live-scorer-viewport {
+  height: 100vh;
+  height: 100dvh;
+  max-height: 100dvh;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.crics-print-portal {
+  position: fixed;
+  inset: 0;
+  z-index: 95;
+  overflow: auto;
+  background: rgba(11, 16, 32, 0.92);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5rem 1rem 2rem;
+}
+
+.crics-print-single-card {
+  width: 85.6mm;
+  height: 54mm;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.crics-print-card-scaler {
+  width: 505.5px;
+  height: 319.5px;
+  transform: scale(0.6388);
+  transform-origin: top left;
+}
+
+.crics-print-sheet-pages {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.crics-print-sheet-page {
+  display: grid;
+  grid-template-columns: repeat(2, 85.6mm);
+  grid-auto-rows: 54mm;
+  gap: 6mm;
+  justify-content: center;
+  align-content: start;
+  padding: 6mm;
+  background: #FFFFFF;
+}
+
+.crics-print-sheet-cell {
+  width: 85.6mm;
+  height: 54mm;
+  overflow: hidden;
+  position: relative;
+}
+
+@media print {
+  .no-print,
+  header,
+  nav {
+    display: none !important;
+  }
+
+  body.crics-printing-pass,
+  html:has(body.crics-printing-pass) {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    background: #FFFFFF !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  body.crics-printing-pass > *:not(.crics-print-portal) {
+    display: none !important;
+  }
+
+  body.crics-printing-pass .crics-print-portal {
+    display: block !important;
+    position: static !important;
+    inset: auto !important;
+    overflow: visible !important;
+    background: transparent !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  body.crics-printing-pass .crics-print-portal .no-print,
+  body.crics-printing-pass .crics-print-portal .no-print * {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  .crics-print-single-card {
+    width: 85.6mm !important;
+    height: 54mm !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    page-break-inside: avoid !important;
+  }
+
+  .crics-print-sheet-pages {
+    display: block !important;
+  }
+
+  .crics-print-sheet-page {
+    display: grid !important;
+    grid-template-columns: repeat(2, 85.6mm) !important;
+    grid-auto-rows: 54mm !important;
+    gap: 6mm !important;
+    justify-content: center !important;
+    align-content: start !important;
+    padding: 6mm 0 !important;
+    page-break-after: always !important;
+    break-after: page !important;
+    background: #FFFFFF !important;
+  }
+
+  .crics-print-sheet-page:last-child {
+    page-break-after: auto !important;
+    break-after: auto !important;
+  }
+
+  .crics-print-sheet-cell {
+    width: 85.6mm !important;
+    height: 54mm !important;
+    overflow: hidden !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+}
+
+.high-contrast-scoring {
+  --token-page: #FFFFFF;
+  --token-card: #FFFFFF;
+  --token-border: #000000;
+  --token-text: #000000;
+  --token-muted: #000000;
+}
+
+.dark .high-contrast-scoring {
+  --token-page: #000000;
+  --token-card: #000000;
+  --token-border: #FFFFFF;
+  --token-text: #FFFFFF;
+  --token-muted: #FFFFFF;
+}
+
+.high-contrast-scoring section,
+.high-contrast-scoring button {
+  border-width: 2px;
+}
+
+.dark .bg-wicket.text-white {
+  background-color: #DC2626;
+  border-color: #DC2626;
+}
+

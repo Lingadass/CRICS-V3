@@ -1,0 +1,63 @@
+{
+  "packageId": "com.crics.offline.scorer",
+  "host": "TODO_REPLACE_WITH_PRODUCTION_DOMAIN.example.com",
+  "name": "CRICS Cricket Scorer",
+  "launcherName": "CRICS",
+  "display": "standalone",
+  "themeColor": "#2C47D6",
+  "themeColorDark": "#0B1020",
+  "navigationColor": "#0B1020",
+  "navigationColorDark": "#0B1020",
+  "navigationDividerColor": "#222C47",
+  "navigationDividerColorDark": "#222C47",
+  "backgroundColor": "#121A45",
+  "enableNotifications": false,
+  "startUrl": "https://TODO_REPLACE_WITH_PRODUCTION_DOMAIN.example.com/",
+  "iconUrl": "https://TODO_REPLACE_WITH_PRODUCTION_DOMAIN.example.com/pwa-512x512.png",
+  "maskableIconUrl": "https://TODO_REPLACE_WITH_PRODUCTION_DOMAIN.example.com/pwa-maskable-512x512.png",
+  "splashScreenFadeOutDuration": 200,
+  "signingKey": {
+    "path": "./TODO_REPLACE_WITH_KEYSTORE_PATH.keystore",
+    "alias": "TODO_REPLACE_WITH_KEY_ALIAS"
+  },
+  "appVersionName": "1.0.0",
+  "appVersionCode": 1,
+  "shortcuts": [
+    {
+      "name": "New Match Wizard",
+      "shortName": "New Match",
+      "url": "https://TODO_REPLACE_WITH_PRODUCTION_DOMAIN.example.com/#/wizard",
+      "chosenIconUrl": "https://TODO_REPLACE_WITH_PRODUCTION_DOMAIN.example.com/pwa-192x192.png"
+    },
+    {
+      "name": "Live Scorer",
+      "shortName": "Live Scorer",
+      "url": "https://TODO_REPLACE_WITH_PRODUCTION_DOMAIN.example.com/#/live",
+      "chosenIconUrl": "https://TODO_REPLACE_WITH_PRODUCTION_DOMAIN.example.com/pwa-192x192.png"
+    },
+    {
+      "name": "Match Scorecards",
+      "shortName": "Scorecards",
+      "url": "https://TODO_REPLACE_WITH_PRODUCTION_DOMAIN.example.com/#/scorecards",
+      "chosenIconUrl": "https://TODO_REPLACE_WITH_PRODUCTION_DOMAIN.example.com/pwa-192x192.png"
+    }
+  ],
+  "generatorApp": "bubblewrap-cli",
+  "webManifestUrl": "https://TODO_REPLACE_WITH_PRODUCTION_DOMAIN.example.com/manifest.webmanifest",
+  "fallbackType": "customtabs",
+  "features": {},
+  "alphaDependencies": {
+    "enabled": false
+  },
+  "enableSiteSettingsShortcut": true,
+  "isChromeOSOnly": false,
+  "isMetaQuest": false,
+  "minSdkVersion": 21,
+  "orientation": "any",
+  "fingerprints": [
+    {
+      "name": "TODO_REPLACE_WITH_PLAY_CONSOLE_APP_SIGNING_CERT",
+      "value": "TODO_REPLACE_WITH_PLAY_CONSOLE_SHA256_CERT_FINGERPRINT_AA:BB:CC:DD:EE:FF:00:11:22:33:44:55:66:77:88:99"
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>CRICS Offline Cricket Scoring App</title>
+  <meta name="description"
+    content="CRICS is a free offline cricket scoring app for ball-by-ball scores, player stats, tournaments and PDF scorecards. No internet required." />
+  <link rel="canonical" href="https://crics.lingadass.dev/" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="application-name" content="CRICS" />
+  <meta name="color-scheme" content="light dark" />
+  <meta property="og:title" content="CRICS Offline Cricket Scoring App" />
+  <meta property="og:description"
+    content="CRICS is a free offline cricket scoring app for ball-by-ball scores, player stats, tournaments and PDF scorecards. No internet required." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://crics.lingadass.dev/" />
+  <meta property="og:site_name" content="CRICS" />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:image" content="https://crics.lingadass.dev/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:alt" content="CRICS free offline cricket scoring app by eSportZignal" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CRICS Offline Cricket Scoring App" />
+  <meta name="twitter:description"
+    content="CRICS is a free offline cricket scoring app for ball-by-ball scores, player stats, tournaments and PDF scorecards. No internet required." />
+  <meta name="twitter:image" content="https://crics.lingadass.dev/og-image.jpg" />
+  <meta name="twitter:image:alt" content="CRICS free offline cricket scoring app by eSportZignal" />
+  <meta name="theme-color" content="#2C47D6" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="CRICS" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/pwa-192x192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <style>
+    #initial-intro-splash {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background-color: #121A45;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+    }
+
+    #initial-intro-splash img {
+      width: 160px;
+      height: 160px;
+      border-radius: 28px;
+      object-fit: cover;
+      opacity: 1;
+      transform: translate3d(0, 0px, 0) scale(0.92);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    html.crics-skip-initial-intro #initial-intro-splash {
+      display: none !important;
+    }
+    html.crics-skip-initial-intro .crics-fallback,
+    html.crics-skip-initial-intro .crics-noscript {
+      display: none !important;
+    }
+    .crics-fallback, .crics-noscript {
+      max-width: 720px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+    .crics-fallback a, .crics-noscript a { color: #2C47D6; }
+  </style>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "CRICS",
+      "url": "https://crics.lingadass.dev/",
+      "description": "A free offline cricket scoring app for ball-by-ball scoring, player registry, career statistics, tournaments and PDF scorecards.",
+      "applicationCategory": "SportsApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript and a modern web browser",
+      "offers": {
+        "@type": "Offer",
+        "price": 0,
+        "priceCurrency": "INR"
+      },
+      "inLanguage": ["en", "hi", "es"],
+      "screenshot": [
+        "https://crics.lingadass.dev/screenshot-home.png",
+        "https://crics.lingadass.dev/screenshot-live.png",
+        "https://crics.lingadass.dev/screenshot-scorecard.png",
+        "https://crics.lingadass.dev/screenshot-tournament.png"
+      ],
+      "featureList": [
+        "Ball-by-ball offline cricket scoring",
+        "Player registry",
+        "Career statistics",
+        "Tournaments and knockout brackets",
+        "PDF and image scorecard export",
+        "Backup and restore",
+        "English, Hindi and Spanish"
+      ],
+      "publisher": {
+        "@type": "Person",
+        "name": "eSportZignal",
+        "url": "https://esportzignal.lingadass.dev/",
+        "logo": "https://crics.lingadass.dev/logo-256.png",
+        "sameAs": [
+          "https://www.instagram.com/esportzignalofficial/",
+          "https://youtube.com/@esportzignal"
+        ]
+      },
+      "creator": {
+        "@type": "Person",
+        "name": "LINGADASS K"
+      }
+    }
+  </script>
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('crics-theme') || 'system';
+        var isDark =
+          saved === 'dark' ||
+          (saved === 'system' &&
+            window.matchMedia &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches);
+        document.documentElement.classList.toggle('dark', isDark);
+        document.documentElement.style.colorScheme = isDark ? 'dark' : 'light';
+        var meta = document.querySelector('meta[name="theme-color"]');
+        if (meta) meta.setAttribute('content', isDark ? '#121A45' : '#2C47D6');
+        if (
+          sessionStorage.getItem('crics_intro_shown_session') === '1' ||
+          localStorage.getItem('crics_show_intro') === '0'
+        ) {
+          document.documentElement.classList.add('crics-skip-initial-intro');
+        } else {
+          var preload = document.createElement('link');
+          preload.rel = 'preload';
+          preload.as = 'image';
+          preload.href = '/intro-crics.webp';
+          preload.type = 'image/webp';
+          document.head.appendChild(preload);
+        }
+      } catch (e) { }
+    })();
+  </script>
+</head>
+
+<body class="bg-page text-text antialiased selection:bg-brand-600 selection:text-white">
+  <div id="initial-intro-splash" aria-hidden="true">
+    <img src="/intro-crics.webp" alt="" width="160" height="160" />
+  </div>
+  <div id="root">
+    <main class="crics-fallback">
+      <h1>CRICS - Offline Cricket Scoring App</h1>
+      <p>CRICS provides ball-by-ball offline cricket scoring, player registration with ID cards and QR passes, career statistics, tournaments with knockouts, scorecard PDF and image exports, and backup and restore.</p>
+      <h2>Features</h2>
+      <ul>
+        <li>Ball-by-ball offline scoring</li>
+        <li>Player registry with ID cards and QR passes</li>
+        <li>Career statistics</li>
+        <li>Tournaments with knockout brackets</li>
+        <li>Scorecard PDF and image export</li>
+        <li>Backup and restore</li>
+        <li>English, Hindi and Spanish</li>
+      </ul>
+      <p>Install CRICS from Android Chrome using “Add to Home screen”.</p>
+      <nav aria-label="CRICS guides">
+        <a href="/about/">About CRICS</a> |
+        <a href="/features/">Features</a> |
+        <a href="/how-to-score-a-cricket-match/">How to score a cricket match</a> |
+        <a href="/faq/">FAQ</a> |
+        <a href="/privacy-policy.html">Privacy policy</a>
+      </nav>
+    </main>
+  </div>
+  <noscript>
+    <main class="crics-noscript">
+      <h1>CRICS - Offline Cricket Scoring App</h1>
+      <p>CRICS provides ball-by-ball offline cricket scoring, player registration with ID cards and QR passes, career statistics, tournaments with knockouts, scorecard PDF and image exports, and backup and restore.</p>
+      <h2>Features</h2>
+      <ul>
+        <li>Ball-by-ball offline scoring</li>
+        <li>Player registry with ID cards and QR passes</li>
+        <li>Career statistics</li>
+        <li>Tournaments with knockout brackets</li>
+        <li>Scorecard PDF and image export</li>
+        <li>Backup and restore</li>
+        <li>English, Hindi and Spanish</li>
+      </ul>
+      <p>Install CRICS from Android Chrome using “Add to Home screen”.</p>
+      <nav aria-label="CRICS guides">
+        <a href="/about/">About CRICS</a> |
+        <a href="/features/">Features</a> |
+        <a href="/how-to-score-a-cricket-match/">How to score a cricket match</a> |
+        <a href="/faq/">FAQ</a> |
+        <a href="/privacy-policy.html">Privacy policy</a>
+      </nav>
+    </main>
+  </noscript>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
+</html>
